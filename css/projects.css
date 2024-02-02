@@ -1,0 +1,123 @@
+/* Adjust margin for the project title */
+.projectTitle {
+    margin-top: 20%;
+}
+
+
+.projects-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    padding-top: 5%;
+
+}
+
+
+.myItem{
+
+    width: 205px;
+    height: 205px;
+
+    transition: transform 0.2s; /* Animation */
+
+    border: 4px solid #0000;
+
+    border-radius: 15px;
+}
+
+.myItem:hover {
+    transform: scale(1.01); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.first-item {
+
+    background:
+            linear-gradient(var(--light-main), var(--light-main)) padding-box,
+            linear-gradient(90deg, #21D4FD 0%, #B721FF 100%) border-box;
+}
+
+.second-item {
+    background:
+            linear-gradient(var(--light-main), var(--light-main)) padding-box,
+            linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%) border-box;
+}
+
+.third-item {
+    background:
+            linear-gradient(var(--light-main), var(--light-main)) padding-box,
+            linear-gradient(90deg, #FBDA61 0%, #ffb2e6 100%) border-box;
+}
+
+
+
+.projects-wrapper a {
+    text-decoration: none;
+    target: "_blank";
+}
+
+.project-icon {
+    width: 1vw;
+    height: 1vw;
+
+    position: relative;
+    margin-top: 5%;
+    margin-left: 5%;
+
+    /* Hover animation filter */
+    filter: invert(34%) sepia(9%) saturate(0%)
+            hue-rotate(221deg) brightness(95%)
+            contrast(73%);
+}
+
+.project-icon:hover {
+    filter: invert(65%) sepia(0%) saturate(25%)
+            hue-rotate(294deg) brightness(104%)
+            contrast(89%);
+}
+
+.project-description {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-weight: 600;
+
+    color: var(--dark-main);
+}
+
+
+
+/* Responsive styling for smaller screens */
+
+
+@media (max-width: 991.98px) {
+
+    .projects-wrapper {
+        flex-direction: column;
+    }
+
+    .myItem {
+        width: 100%;
+        flex-basis: 100%;
+
+        margin-top: 5%; /* Space between items */
+
+        margin-right: 5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .project-description  {
+        margin-left: 2%;
+        margin-right: 30%;
+
+        color: var(--dark-main);
+
+
+    }
+
+
+
+}
+

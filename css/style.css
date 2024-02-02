@@ -1,0 +1,107 @@
+/* Apply box-sizing to all elements for consistent sizing */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --light-main: #f9fafb;
+    --dark-main: #111111;
+    --light-gray-200: #EAEAEA;
+    --dark-gray-200: #292929;
+}
+
+::selection {
+    background: #00FFC0;
+    color: #111111;
+}
+
+/* Body styles for background and font */
+body {
+    background-color: var(--light-main);
+    color: var(--dark-main);
+
+    font-family: Montserrat, sans-serif;
+
+
+}
+
+
+/* Heading styles */
+h1, h2 {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+/* Additional heading style */
+h3 {
+    font-weight: 400;
+}
+
+/* Paragraph styles */
+p {
+    color: #a1a4a6;
+    font-weight: 400;
+}
+
+hr {
+    width: 100%;
+
+    background-color: var(--light-gray-200);
+    border: none;
+    height: 1px;
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+.container {
+    width: 675px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 70px 0;
+    flex-direction: column;
+}
+
+
+/* Dark mode styles (invert) */
+
+.dark-mode {
+    --dark-main: #efefef;
+    --light-main: #111111;
+
+    --light-gray-200: #292929;
+    --dark-gray-200: #EAEAEA;
+}
+
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+
+    .container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1.0em;
+    }
+
+
+}

@@ -1,0 +1,34 @@
+
+
+
+.contacts-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    gap: 10px;
+    grid-auto-rows: minmax(30px, auto);
+}
+
+
+.contact a {
+    target: "_blank";
+    color: #bababa;
+    text-decoration: none;
+}
+
+
+.contact img { /* Icon open new page */
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+}
+
+.contact:hover {
+    filter: invert(99%) sepia(100%) saturate(627%) hue-rotate(198deg) brightness(120%) contrast(86%);
+}
+
+/* New style for contact content */
+.contact {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    filter: invert(87%) sepia(0%) saturate(0%) hue-rotate(290deg) brightness(87%) contrast(90%);
+}

@@ -1,0 +1,62 @@
+/* Typescript Animation */
+
+.animated-text {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.animated-text span{
+    position: relative;
+}
+
+.animated-text span::before{
+    content: "Gamer";
+    color: #5AAFFF;
+    animation: words 20s infinite;
+    text-decoration: underline;
+
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: var(--light-main);
+    border-left: 0.1vw solid #5AAFFF;
+    right: -4%;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 0.2vw solid #5AAFFF;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Freelancer";
+    }
+    21%,40%{
+        content: "Backend Developer";
+    }
+    41%,60%{
+        content: "Frontend Developer";
+    }
+    61%,80%{
+        content: "Student";
+    }
+    81%,100%{
+        content: "Gamer";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 3%);
+    }
+}
